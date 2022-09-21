@@ -9,6 +9,7 @@ namespace Subway.UI.Controllers
     [Route("api/products")]
     public class ProductController : ControllerBase
     {
+        [HttpGet]
         public IActionResult Index()
         {
             SubwayContext subwayContext = new SubwayContext();

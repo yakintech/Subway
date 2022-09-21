@@ -20,6 +20,7 @@ namespace Subway.UI.Controllers
         }
 
         [Route("{id}")]
+        [HttpGet]
         public Category Index(int id)
         {
             return new Category()
