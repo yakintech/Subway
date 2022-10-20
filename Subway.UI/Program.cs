@@ -4,12 +4,16 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Subway.UI.Models.dto;
+using Subway.UI.Models.filters;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddFluentValidation();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+//builder.Services.AddControllers(options => options.Filters.Add(typeof(ExceptionFilter)));
 builder.Services.AddSwaggerGen(c => {
     c.SwaggerDoc("v1",
     new() { Title = "Fritz's Contacts API", Version = "v1" });

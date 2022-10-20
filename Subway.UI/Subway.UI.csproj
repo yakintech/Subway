@@ -22,6 +22,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Models\filters\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Models\profiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\filters\" />
+    <Folder Include="Models\profiles\" />
+  </ItemGroup>
 </Project>

@@ -49,5 +49,20 @@ namespace Subway.UI.Controllers
             //    }
             //});
         }
+
+
+
+        public IActionResult Hello()
+        {
+
+            return Ok();
+            return Content("");
+           
+
+
+        }
+
+
+
     }
 }
